@@ -1,0 +1,153 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+  margin-left: 200px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+  margin-left: 0; /* Adjusted margin-left to 0 */
+}
+
+/* User Info */
+.user-info {
+  margin-left: 10px;
+  text-align: right; /* Align user info to the right */
+  color: white; /* Adjust text color */
+  padding-right: 20px; /* Adjusted padding to provide more space */
+}
+
+.user-info h1 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.user-info p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Main */
+main {
+  display: flex;
+}
+
+/* Navigation */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  height: 100%;
+  width: 200px;
+  top: 150px;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav h2 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+  display: block;
+  margin-bottom: 2px;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 200px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.employee-dropdown {
+  margin-left: 20px; /* Adjust margin */
+}
+
+/* Dashboard Card */
+.dashboard-card {
+  width: 25%;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.dashboard-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dashboard-card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Logout Button */
+.logout {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* Adjusted width to 100% */
+}
+
+.logout form {
+  margin-bottom: 5px;
+}

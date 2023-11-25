@@ -1,0 +1,23 @@
+body{
+  background-color: #43ac9d;
+  font-family: Poppins;
+ }
+ .login-section{
+   margin: 50px;
+   padding: 20px;
+   border-radius: 10px;
+   background-color: aliceblue;
+ }
+ .header-menu img{
+   width: 150px;
+ }
+ .heading h5{
+   font-weight: 600;
+ }
+ .login-box{
+   padding: 80px;
+ }
+ .login-box a{
+   
+ }
+ 

@@ -203,3 +203,31 @@
 .card-stats #btn {
   color: red;
 }
+
+.card-cal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.card-week {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.card-day {
+  background-color: #bcbcbc;
+  color: #000000;
+  font-size: 16px;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}

@@ -1,12 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>"Hello Lekhika"</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveEasy</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./admin.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      canvas {
+          /* Set a max-width to ensure the chart doesn't overflow its container */
+          max-width: 400px;
+          margin: auto;
+          display: block;
+      }
+  </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="top">
+        <div class="logo">
+          <img
+            src="/Images/logo-no-background.png"
+            alt="logo"
+            class="logo-img"
+          />
+        </div>
+        <div>
+          <i class="bx bx-menu" id="btn"></i>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href="#">
+            <i class="bx bxs-dashboard"></i>
+            <span class="nav-item">Dashboard</span>
+          </a>
+          <!-- <span class="tooltip">Dashboard</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-copy-alt"></i>
+            <span class="nav-item">Employee Management</span>
+          </a>
+          <!-- <span class="tooltip">Employee management</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-list-check"></i>
+            <span class="nav-item">Bookings</span>
+          </a>
+          <!-- <span class="tooltip">Bookings</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-shopping-bag"></i>
+            <span class="nav-item">Inventory</span>
+          </a>
+          <!-- <span class="tooltip">Inventory</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-body"></i>
+            <span class="nav-item">Customers</span>
+          </a>
+          <!-- <span class="tooltip">Customers</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-report"></i>
+            <span class="nav-item">Reports</span>
+          </a>
+          <!-- <span class="tooltip">Reports</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="nav-item">Settings</span>
+          </a>
+          <!-- <span class="tooltip">Settings</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-support"></i>
+            <span class="nav-item">Help/Support</span>
+          </a>
+          <!-- <span class="tooltip">Help/Support</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-log-out"></i>
+            <span class="nav-item">Logout</span>
+          </a>
+          <!-- <span class="tooltip">Logout</span> -->
+        </li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <header>
+        <div class="profile">
+          <span>My Profile</span>
+          <i class="bx bxs-user-circle" id="btn"></i>
+        </div>
+      </header>
+      <main>
+        <div class="name-header">
+          <h1>Hi, Lekhika!</h1>
+          <small>ID: 2557661</small>
+        </div>
+        <div class="select-header">
+          <h3>Select Branch</h3>
+          <select name="" id="">
+            <option value="">Select Branch</option>
+            <option value="">Larch Street(S.NO 19)</option>
+            <option value="">Brook Street(S.NO 4)</option>
+          </select>
+        </div>
+        <div class="analytics">
+          <div class="card">
+            <div class="card-name">
+              <h4>Total Bookings</h4>
+            </div>
+            <div class="card-stats">
+               <span>55</span>
+               <i class="bx bx-up-arrow-alt" id="btn"></i>
+            </div>
+            <div class="card-cal">
+              <button class="card-week">Week</button>
+              <button class="card-day">Today</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-name">
+              <h4>Total Cars</h4>
+            </div>
+            <div class="card-stats">
+              <i class="bx bx-car"></i>
+               <span>80</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-name">
+              <h4>Total Revenue</h4>
+            </div>
+            <div class="card-stats">
+               <span>£4600</span>
+            </div>
+            <div class="card-cal">
+              <button class="card-week">Week</button>
+              <button class="card-day">Today</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-name">
+              <h4>Cancelled</h4>
+            </div>
+            <div class="card-stats">
+               <span>09</span>
+            </div>
+            <div class="card-cal">
+              <button class="card-week">Week</button>
+              <button class="card-day">Today</button>
+            </div>
+          </div>
+        </div>
+        <div class="analytics1">
+          <div class="card">
+            <div class="card-car">
+              <h4>Booked Cars</h4>
+              <div class="pie-chart-container">
+                <canvas id="myPieChart"></canvas>
+              </div>
+              <div class="legend"></div>
+            </div>
+          </div>
+            <div class="card">
+              <div class="card-name1">
+                <h4>Quick Links</h4>
+              </div>
+              <div class="card-Link1">
+                <button class="card-reports">
+                    Generate Reports
+                    <i class="bx bx-file"></i>
+                </button>
+                <button class="card-complaints">
+                  Customer Complaints
+                  <i class="bx bx-user-pin"></i>
+              </button>                
+            </div>
+        </div>
+        <div class="card">
+          <div class="card-Employee">
+            <h4>Employee Management</h4>
+          </div>
+          <div class="card-add">
+            <button class="card-emp">Add Employee</button>
+            <button class="card-remove">Remove</button>                
+        </div>
+        <div class="card-add1">
+          <button class="card-info">Update Info</button>
+          <button class="card-pay">Payroll</button>                
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-Inventory">
+        <h4>Inventory</h4>   
+          <select name="" id="">
+            <option value="">Select Branch</option>
+            <option value="">Larch Street(S.NO 19)</option>
+            <option value="">Brook Street(S.NO 4)</option>
+          </select>
+        </div>
+      <div class="card-Invent">
+        <button class="card-list">Vehicle List</button>
+        <button class="card-maint">Maintenance</button>                
+    </div>
+    </div>
+      </main>
+    </div>
+    <script>
+      // Sample data for the pie chart
+      var data = {
+        labels: ['BMW', 'Audi', 'Mercedes', 'Cooper', 'Range Rover', 'Volkswagon'],
+        datasets: [
+          {
+            data: [50, 20, 45, 35, 10, 60],
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50', '#580808', '#c71bb9', '#7c80ed'],
+          },
+        ],
+      };
+
+      // Get the canvas element
+      var ctx = document.getElementById('myPieChart').getContext('2d');
+
+      var myPieChart = new Chart(ctx, {
+  type: 'pie',
+  data: data,
+  options: {
+    responsive: true,
+    legend: {
+      display: false, // Disable the default legend
+    },
+    tooltips: {
+      callbacks: {
+        label: function (tooltipItem, data) {
+          var dataset = data.datasets[tooltipItem.datasetIndex];
+          var total = dataset.data.reduce(function (
+            previousValue,
+            currentValue,
+            currentIndex,
+            array
+          ) {
+            return previousValue + currentValue;
+          });
+          var currentValue = dataset.data[tooltipItem.index];
+          var percentage = Math.floor(
+            ((currentValue / total) * 100) + 0.5
+          );
+          return `${data.labels[tooltipItem.index]}: ${percentage}%`;
+        },
+      },
+    },
+    plugins: {
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            var label = context.label || '';
+            label += ': ';
+            if (context.parsed.y !== null) {
+              label += context.parsed.y + '%';
+            }
+            return label;
+          },
+        },
+      },
+    },
+  },
+});
+
+      // Custom legend callback function
+      var legendCallback = function (chart) {
+        var text = [];
+        text.push('<ul>');
+        for (var i = 0; i < chart.data.labels.length; i++) {
+          text.push('<li>');
+          text.push(
+            '<span class="legend-color" style="background-color:' +
+              chart.data.datasets[0].backgroundColor[i] +
+              '"></span>'
+          );
+          text.push(chart.data.labels[i]);
+          text.push('</li>');
+        }
+        text.push('</ul>');
+        return text.join('');
+      };
+
+      // Append the legend HTML to the "legend" div
+      document.querySelector('.legend').innerHTML = legendCallback(myPieChart);
+    </script>
+
+      <script>
+      let btn = document.querySelector("#btn");
+      let sidebar = document.querySelector(".sidebar");
+
+      btn.onclick = function () {
+        sidebar.classList.toggle("active");
+      };
+    </script>
+    <!-- Add this script at the end of your existing HTML file -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      let addEmployeeButton = document.querySelector(".card-emp");
+
+      addEmployeeButton.addEventListener("click", function () {
+          // Redirect to the Add Employee page when the button is clicked
+          window.location.href = "add_employee.html";
+      });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      let removeEmployeeButton = document.querySelector(".card-remove");
+
+      removeEmployeeButton.addEventListener("click", function () {
+          window.location.href = "emp_remove.html";
+      });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      let updateEmployeeButton = document.querySelector(".card-info");
+
+      updateEmployeeButton.addEventListener("click", function () {
+          window.location.href = "update_emp.html";
+      });
+  });
+</script>
+  </body>
 </html>

@@ -44,7 +44,7 @@ label {
 }
 
 .banner {
-  background-image: url(../images/banner.jpg);
+  background-image: url(../images/banner1.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -142,7 +142,7 @@ label {
 }
 
 .bg-car1 {
-  background-image: url(../images/car-bg-1.jpg);
+  background-image: url(../images/car-bg-1.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

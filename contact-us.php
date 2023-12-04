@@ -3,7 +3,8 @@
 
 <div class="py-5 bg-secondary">
     <div class="container text-center">
-        <h4 class="text-white">Contact Us</h4>
+         <img src="assets/images/logo.png" class="d-block w-100" alt="...">
+        <!-- <h4 class="text-white">Contact Us</h4> -->
     </div>
 </div>
 
